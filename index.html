@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
 
@@ -14,7 +14,7 @@
     </header>
 
     <main>
-        <aside>
+        <aside class="form-container">
             <article>
                 <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
                     penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk,
@@ -68,10 +68,59 @@
             </article>
         </aside>
 
-        <aside>
+        <aside class="result-container">
             <section>
-                <h2>Hasil</h2>
-                <p>konten sementara wok wok wok</p>
+                <header>
+                    <h2>Hasil</h2>
+                </header>
+
+                <div class="hasil">
+                    <p class="BMI-text-result">Berat Badan Lebih</p>
+                    <p class="BMI-number-result"> 24.7</p>
+                    <p>Anda memiliki berat badan berlebih</p>
+                    <button type="submit" class="button bg-lightblue">Download Hasil BMI</button>
+                </div>
+
+                <div>
+                    <p>Hasil BMI diantara 23 dan 25</p>
+                    <p>Anda berada dalam kategori overweight atau berat badan berlebih. Cara terbaik untuk menurunkan
+                        berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga. Jika BMI Anda
+                        berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
+                </div>
+
+                <div>
+                    <button type="submit" class="button bg-lightblue">Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button type="submit" class="button bg-lightblue">Registrasi Online Ahli Gizi</button>
+                </div>
+
+                <article>
+                    <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
+                        seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait
+                        dengan berat badan Anda.</p>
+                </article>
+
+                <div class="info-penyakit">
+                    <p class="beberapa-penyakit">Beberapa penyakit yang berasal dari kegemukan</p>
+                    <p>Diabetes</p>
+                    <p>Hipertensi</p>
+                    <p>Sakit Jantung</p>
+                    <p>Osteoarthritis</p>
+                    <button type="submit" class="button bg-lightblue">Konsultasi Dokter Via Aplikasi</button>
+                    <button type="submit" class="button bg-lightblue">Registrasi Online Sekarang</button>
+                </div>
+
+                <div class="download-section">
+                    <h2>Download Aplikasi</h2>
+
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.example.app" target="_blank"><img
+                                src="google-play-logo.png" alt="Google Play Logo" class="image-size">
+                        </a>
+                        <a href="https://apps.apple.com/us/app/example-app/id123456789" target="_blank"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdYu5cwVWophy5tCDz-FtSHf66vxe0zVNFfoSrX2laTESbYXVznKWIKuj6z5JgNkKbw&usqp=CAU"
+                                alt="App Store Logo" class="image-size"></a>
+                    </div>
+                </div>
             </section>
         </aside>
 

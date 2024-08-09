@@ -13,9 +13,16 @@ form {
     background-color: lightgrey;
 }
 
-aside {
+
+.form-container {
     flex-basis: 50%;
     padding: 48px;
+}
+
+.result-container {
+    flex-basis: 50%;
+    padding: 48px;
+    display: none;
 }
 
 .button {
@@ -52,4 +59,44 @@ input [type=number] {
 
 footer {
     text-align: center;
+}
+
+.hasil {
+    text-align: center;
+    background-color: lightgrey;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.BMI-text-result {
+    font-size: 20px;
+}
+
+.BMI-number-result {
+    font-size: 35px;
+    margin-block-start: 15px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.info-penyakit {
+    text-align: center;
+    background-color: lightgrey;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.beberapa-penyakit {
+    font-size: 20px;
+}
+
+.download-section {
+    text-align: center;
+}
+
+.image-size {
+    max-width: 64px;
+    max-height: 64px;
+    width: auto;
+    height: auto;
 }
