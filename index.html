@@ -5,16 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+
+    <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="css\style.css">
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1 class="main-title">Calculator BMI</h1>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
 
+            <!-- Icon on the left side -->
+            <a class="navbar-brand" href="#">
+                <img src="https://www.shutterstock.com/image-vector/cartoon-illustration-bmi-vector-medical-600nw-2156738433.jpg" alt="Logo" class="brand-icon">
+                BMI Calculator Gen-Z
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- Navbar links (aligned to the left) -->
+                <ul class="navbar-nav me-auto">
+
+                    <!-- Calculate BMI Navbar -->
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Calculate BMI</a>
+                    </li>
+
+                    <!-- Konsultasi Ahli Gizi Button Navbar -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Konsultasi Ahli Gizi</a>
+                    </li>
+
+                    <!-- Registrasi Online Ahli Gizi Button Navbar -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registrasi Online Ahli Gizi</a>
+                    </li>
+                    
+                    <!-- Download Aplikasi Button Navbar -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Download Aplikasi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <main>
+        <!-- Left side -->
         <aside class="form-container">
+            <header>
+                <h1>Let's calculate your BMI</h1>
+            </header>
+
             <article>
                 <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
                     penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk,
@@ -22,33 +71,39 @@
                     sekarang di kalkulator BMI</p>
             </article>
 
-            <form>
-                <div>
+            <!-- Form to determine BMI-->
+            <form class="form">
+                <div class="form-group">
                     <h3>Jenis Kelamin</h3>
                     <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label
                         for="laki-laki">Laki-laki</label>
                     <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label
                         for="perempuan">Perempuan</label>
                 </div>
-                <div>
+
+                <div class="form-group">
                     <h3>Berat Badan (kg)</h3>
-                    <input type="number">
+                    <input type="number" id="input-weight" inputmode="numeric" placeholder="dari 30 - 200 kg">
                 </div>
-                <div>
+
+                <div class="form-group">
                     <h3>Usia (tahun)</h3>
-                    <input type="number">
+                    <input type="number" id="input-age" inputmode="numeric" placeholder="Dari 10 - 80 tahun">
                 </div>
-                <div>
+
+                <div class="form-group">
                     <h3>Tinggi badan (cm)</h3>
-                    <input type="number">
+                    <input type="number" id="input-height" inputmode="numeric" placeholder="Dari 50 - 200 cm">
                 </div>
+
+                <!-- tombol submit -->
                 <div class="form-btn-container">
-                    <button type="submit" class="button bg-lightblue">Hitung BMI</button>
-                    <button type="submit" class="button bg-whitesmoke">Reset</button>
+                    <button type="button" class="button bg-lightblue" onclick="formValidate()">Hitung BMI</button>
+                    <button type="button" class="button bg-whitesmoke">Reset</button>
 
                 </div>
 
-            </form>
+            </form> <br>
 
             <article>
                 <header>
@@ -68,6 +123,7 @@
             </article>
         </aside>
 
+        <!-- Right side -->
         <aside class="result-container">
             <section>
                 <header>
@@ -75,23 +131,22 @@
                 </header>
 
                 <div class="hasil">
-                    <p class="BMI-text-result">Berat Badan Lebih</p>
-                    <p class="BMI-number-result"> 24.7</p>
-                    <p>Anda memiliki berat badan berlebih</p>
+                    <p class="BMI-text-result">Hasil BMI-mu</p>
+                    <p class="BMI-number-result" id="output-bmi"></p>
+                    <p id="output-note"></p>
                     <button type="submit" class="button bg-lightblue">Download Hasil BMI</button>
                 </div>
 
                 <div>
-                    <p>Hasil BMI diantara 23 dan 25</p>
-                    <p>Anda berada dalam kategori overweight atau berat badan berlebih. Cara terbaik untuk menurunkan
-                        berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga. Jika BMI Anda
-                        berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
+                    <p id="output-sntce-one"></p>
+                    <p>Jika BMI Anda
+                        berada dalam kategori di atas normal, maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
                 </div>
 
                 <div>
                     <button type="submit" class="button bg-lightblue">Konsultasi Ahli Gizi Via Aplikasi</button>
                     <button type="submit" class="button bg-lightblue">Registrasi Online Ahli Gizi</button>
-                </div>
+                </div> <br>
 
                 <article>
                     <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
@@ -107,7 +162,7 @@
                     <p>Osteoarthritis</p>
                     <button type="submit" class="button bg-lightblue">Konsultasi Dokter Via Aplikasi</button>
                     <button type="submit" class="button bg-lightblue">Registrasi Online Sekarang</button>
-                </div>
+                </div> <br>
 
                 <div class="download-section">
                     <h2>Download Aplikasi</h2>
@@ -131,6 +186,9 @@
         <p>RoyalMand was here to create this hot stuff!</p>
     </footer>
 
+    <script src="js\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
